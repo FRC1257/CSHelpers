@@ -7,11 +7,9 @@
 
 #pragma once
 
-#include <string>
-
 #include <WPILib.h>
 #include <IterativeRobot.h>
-#include <SmartDashboard/SendableChooser.h>
+#include <ctre/Phoenix.h>
 
 class Robot : public frc::IterativeRobot {
 public:
@@ -26,8 +24,21 @@ public:
 	void DriveToBaseline(double speed);
 
 private:
-	frc::SendableChooser<std::string> m_chooser;
-	const std::string kAutoNameDefault = "Default";
-	const std::string kAutoNameCustom = "My Auto";
-	std::string m_autoSelected;
+	//If they use sparks
+	/*
+	Spark BackRightMotor;
+	Spark FrontRightMotor;
+	Spark FrontLeftMotor;
+	Spark BackLeftMotor;
+	 */
+	//If the use talons
+	/*
+	WPI_TalonSRX BackRightMotor;
+	WPI_TalonSRX FrontRightMotor;
+	WPI_TalonSRX FrontLeftMotor;
+	WPI_TalonSRX BackLeftMotor;
+	*/
+	SpeedControllerGroup LeftMotors;
+	SpeedControllerGroup RightMotors;
+	DifferentialDrive DriveTrain;
 };

@@ -9,13 +9,7 @@
 
 #include <iostream>
 
-#include <SmartDashboard/SmartDashboard.h>
-
-void Robot::RobotInit() {
-	m_chooser.AddDefault(kAutoNameDefault, kAutoNameDefault);
-	m_chooser.AddObject(kAutoNameCustom, kAutoNameCustom);
-	frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
-}
+void Robot::RobotInit() {}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -29,15 +23,11 @@ void Robot::RobotInit() {
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-	Robot::DriveToBaseline();
+	DriveToBaseline(5);
 }
 
 void Robot::AutonomousPeriodic() {
-	if (m_autoSelected == kAutoNameCustom) {
-		// Custom Auto goes here
-	} else {
-		// Default Auto goes here
-	}
+
 }
 
 void Robot::TeleopInit() {}
