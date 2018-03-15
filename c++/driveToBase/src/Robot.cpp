@@ -29,7 +29,7 @@ void Robot::RobotInit() {
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-	Robot::DriveToBaseLine();
+	Robot::DriveToBaseline();
 }
 
 void Robot::AutonomousPeriodic() {
