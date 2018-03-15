@@ -83,4 +83,8 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void testPeriodic() {
 	}
+	
+	private void driveForward() {
+		
+	}
 }
