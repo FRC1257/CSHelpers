@@ -9,6 +9,14 @@
 
 #include <iostream>
 
+Robot::Robot() :
+
+	LeftMotors(FrontLeftMotor, BackLeftMotor),
+	RightMotors(FrontRightMotor, BackRightMotor),
+	DriveTrain(LeftMotors, RightMotors)
+
+{}
+
 void Robot::RobotInit() {}
 
 /**
@@ -23,7 +31,7 @@ void Robot::RobotInit() {}
  * make sure to add them to the chooser code above as well.
  */
 void Robot::AutonomousInit() {
-	DriveToBaseline(5);
+	DriveToBaseline(0.8);
 }
 
 void Robot::AutonomousPeriodic() {

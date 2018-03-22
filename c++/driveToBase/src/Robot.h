@@ -24,19 +24,26 @@ public:
 	void DriveToBaseline(double speed);
 
 private:
-	//If they use sparks
+	//If they use Sparks
 	/*
 	Spark BackRightMotor;
 	Spark FrontRightMotor;
 	Spark FrontLeftMotor;
 	Spark BackLeftMotor;
 	 */
-	//If the use talons
+	//If they use Talons
 	/*
 	WPI_TalonSRX BackRightMotor;
 	WPI_TalonSRX FrontRightMotor;
 	WPI_TalonSRX FrontLeftMotor;
 	WPI_TalonSRX BackLeftMotor;
+	*/
+	//If they use Victors
+	/*
+	Victor BackRightMotor;
+	Victor FrontRightMotor;
+	Victor FrontLeftMotor;
+	Victor BackLeftMotor;
 	*/
 	SpeedControllerGroup LeftMotors;
 	SpeedControllerGroup RightMotors;
